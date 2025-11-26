@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Session Docker",
   "description": "Export, import, and auto-apply website login cookies without entering credentials.",
-  "version": "3.0",
+  "version": "1.0",
   "permissions": [
     "cookies",
     "storage",

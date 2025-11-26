@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Session Docker</title>
-  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Session Docker</h1>
-    <p class="warning">Only store sessions you own. Full cookies are saved for login automation.</p>
-  </header>
+  <div class="container">
+    <header class="header">
+      <div class="header-inner">
+        <h1>Session Docker</h1>
+        <p class="warning">Export, import, and seamlessly switch full cookie-based sessions for your own sites—automated session handling.</p>
+      </div>
+    </header>
 
-  <div class="top-controls">
-    <input id="searchBox" type="search" placeholder="Search domains..." />
-    <label class="toggle-auto">
-      <input id="globalAutoToggle" type="checkbox" /> Auto-apply (global)
-    </label>
+    <main class="main-body">
+      <div class="top-controls">
+        <input id="searchBox" type="search" placeholder="Search domains..." />
+        <label class="toggle-auto">
+          <input id="globalAutoToggle" type="checkbox" /> Auto-apply (global)
+        </label>
+      </div>
+
+      <div class="add-row">
+        <input id="addDomain" placeholder="domain.example.com (add or auto-detected)" />
+        <button id="addBtn" class="btn-primary">Add Domain</button>
+      </div>
+
+      <div class="exclude-row">
+        <input id="excludeDomain" placeholder="exclude.example.com (block cookie ops)" />
+        <button id="addExcludeBtn" class="btn-secondary">Add Exclude</button>
+      </div>
+
+      <div class="view-toggle">
+        <button id="listViewBtn" class="active">List View</button>
+        <button id="cardViewBtn">Card View</button>
+      </div>
+
+      <div id="listView" class="session-view">
+        <div id="websiteList" class="website-list"></div>
+        <div id="excludeList" class="exclude-list"></div>
+      </div>
+
+      <div id="cardView" class="session-view hidden">
+        <div id="cardContainer" class="card-container"></div>
+      </div>
+    </main>
+
+    <footer>
+      <small>Session Docker • v1.0</small>
+    </footer>
   </div>
 
-  <div class="add-form">
-    <input id="addDomain" placeholder="domain.example.com" />
-    <button id="addBtn">Add Domain</button>
-  </div>
-
-  <div class="view-toggle">
-    <button id="listViewBtn" class="active">List View</button>
-    <button id="cardViewBtn">Card View</button>
-  </div>
-
-  <div id="listView" class="session-view">
-    <div id="websiteList" class="website-list"></div>
-  </div>
-
-  <div id="cardView" class="session-view hidden">
-    <div id="cardContainer" class="card-container"></div>
-  </div>
-
-  <footer>
-    <small>Session Docker • v3.0</small>
-  </footer>
-</div>
-<script src="popup.js"></script>
+  <script src="popup.js"></script>
 </body>
 </html>
