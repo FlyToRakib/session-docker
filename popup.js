@@ -176,7 +176,7 @@ function renderListView(){
 function renderExcludeList(){
   excludeList.innerHTML = '<h4 style="margin:6px 0 8px 0;color:#444">Excluded domains</h4>';
   if(!excludes.length){
-    excludeList.innerHTML += '<p style="color:#888;font-size:13px">No excluded domains. You can add domains to exclude cookie operations.</p>';
+    excludeList.innerHTML += '<p style="color:#888;font-size:13px">No excluded domains added yet!</p>';
     return;
   }
   excludes.sort().forEach(domain => {
