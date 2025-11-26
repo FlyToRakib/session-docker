@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Session Docker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Session Docker</h1>
+      <p class="warning">Only store sessions you own. Some sites use HttpOnly or localStorage and may not restore with cookies alone.</p>
+    </header>
+
+    <div class="top-controls">
+      <input id="searchBox" type="search" placeholder="Search domains..." />
+      <label class="toggle-auto"><input id="globalAutoToggle" type="checkbox" /> Auto-apply (global)</label>
+    </div>
+
+    <div class="add-form">
+      <input id="addDomain" placeholder="domain.example.com" />
+      <input id="addSession" placeholder="Paste cookie string (name=value; ...)" />
+      <button id="addBtn">Add / Update</button>
+    </div>
+
+    <div class="view-toggle">
+      <button id="listViewBtn" class="active">List View</button>
+      <button id="cardViewBtn">Card View</button>
+    </div>
+
+    <div id="listView" class="session-view">
+      <div id="websiteList" class="website-list"></div>
+    </div>
+
+    <div id="cardView" class="session-view hidden">
+      <div id="cardContainer" class="card-container"></div>
+    </div>
+
+    <footer>
+      <small>Session Docker • v2.0</small>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
