@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Session Docker",
-  "description": "Save, edit, copy and auto-apply your website login sessions (cookies). Use only for accounts you own, Thanks",
-  "version": "2.0",
+  "description": "Export, import, and auto-apply website login cookies without entering credentials.",
+  "version": "3.0",
   "permissions": [
     "cookies",
     "storage",
