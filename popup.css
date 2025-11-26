@@ -8,7 +8,7 @@
   --list-btn-hover:#ffffff;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#222;width:420px;}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#222;width:420px;height:600px;}
 .container{display:flex;flex-direction:column;height:100%;}
 .header{
   background: linear-gradient(90deg, rgba(0,39,25,1) 0%, rgba(0,39,25,0.95) 100%);
@@ -34,11 +34,23 @@ body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);
 .view-toggle button.active{background:var(--primary);color:var(--secondary);}
 
 /* Single scroll container: session-view */
-.session-view{max-height:420px;overflow:auto;padding-right:6px;}
+.session-view{max-height:300px;overflow:auto;padding-right:6px;}
 
 /* List View */
 .website-list .website-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e8e8e8;}
-.website-item span{font-weight:700;color:var(--primary);}
+.website-item span{
+  font-weight:700;color:var(--primary);
+  max-width:240px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.website-item span:hover{
+  overflow:visible;
+  white-space:normal;
+}
+
+/* Flat button actions */
 .flat-actions{display:flex;gap:10px;}
 .flat-action{
   background:transparent;border:none;color:var(--list-btn-text);cursor:pointer;padding:6px 4px;font-weight:600;border-radius:0;
@@ -53,14 +65,24 @@ body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);
 /* Card view */
 .card-container{display:flex;flex-direction:column;gap:10px;}
 .card{background:var(--card-bg);border:1px solid var(--primary);border-radius:10px;padding:10px;position:relative;}
-.card h3{margin:0 0 6px 0;color:var(--primary);font-size:14px;}
+.card h3{
+  margin:0 0 6px 0;color:var(--primary);
+  max-width:360px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.card h3:hover{
+  overflow:visible;
+  white-space:normal;
+}
 .card textarea{width:100%;min-height:100px;font-family:monospace;padding:8px;border-radius:6px;border:1px solid var(--primary);resize:vertical;}
 .button-group{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
-.card .top-right{position:absolute;right:10px;top:10px;display:flex;gap:6px;}
+.card .top-right{position:absolute;right:25px;top:10px;display:flex;gap:6px;} /* shifted 15px left to avoid scrollbar */
 .card .small-note{font-size:12px;color:#666;margin-top:6px;}
 
 /* Buttons generic */
 .btn{padding:7px 10px;border-radius:6px;border:none;background:var(--secondary);color:var(--primary);font-weight:700;cursor:pointer;}
 .btn.warn{background:#ff6b6b;color:#fff;}
-footer{padding:8px;text-align:center;font-size:11px;color:var(--muted);}
+footer{padding:8px;text-align:center;font-size:14px;color:var(--muted); background-color: #ffffff;}
 .hidden{display:none;}
