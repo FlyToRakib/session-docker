@@ -1,6 +1,6 @@
 # Session Docker
 
-Version: 2.0
+Version: 1.0
 
 **What it does**
 - Save website login sessions (cookie strings) per domain.
