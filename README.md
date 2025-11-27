@@ -1,6 +1,6 @@
 # Session Docker
 
-Version: 2.0
+Version: 1.0
 
 **What it does**
 - Save website login sessions (cookie strings) per domain.
@@ -33,3 +33,4 @@ Version: 2.0
 
 **Support**
 - This template is a starting point. If you want improvements (localStorage restoration, import/export JSON, scheduled backups), request them.
+
